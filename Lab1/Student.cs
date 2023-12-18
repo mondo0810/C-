@@ -7,6 +7,7 @@ public class Student
     public string Name { get; set; }
     public string Password { get; set; }
     private static List<Student> students = new List<Student>();
+
     public static void Create(Student student)
     {
         students.Add(student);
@@ -19,32 +20,51 @@ public class Student
 
     public static void Update(int id, Student newStudent)
     {
-        var student = students.Find(s => s.Id == id);
-        if (student != null)
+        foreach (var student in students)
         {
-            student.Name = newStudent.Name;
-            student.Password = newStudent.Password;
+            if (student.Id == id)
+            {
+                student.Name = newStudent.Name;
+                student.Password = newStudent.Password;
+                break;
+            }
         }
     }
 
     public static void Delete(int id)
     {
-        var student = students.Find(s => s.Id == id);
-        if (student != null)
+        foreach (var student in students)
         {
-            students.Remove(student);
+            if (student.Id == id)
+            {
+                students.Remove(student);
+                break;
+            }
         }
     }
 
     public static Student Find(int id)
     {
-        return students.Find(s => s.Id == id);
+        foreach (var student in students)
+        {
+            if (student.Id == id)
+            {
+                return student;
+            }
+        }
+        return null;
     }
 
     public static bool Login(string name, string password)
     {
-        var student = students.Find(s => s.Name == name && s.Password == password);
-        return student != null;
+        foreach (var student in students)
+        {
+            if (student.Name == name && student.Password == password)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static void Main(string[] args)
