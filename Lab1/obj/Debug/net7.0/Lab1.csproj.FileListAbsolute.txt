@@ -1,0 +1,14 @@
+E:\IT_THIBLUE\C# BACKEND\Lab1\obj\Debug\net7.0\Lab1.GeneratedMSBuildEditorConfig.editorconfig
+E:\IT_THIBLUE\C# BACKEND\Lab1\obj\Debug\net7.0\Lab1.AssemblyInfoInputs.cache
+E:\IT_THIBLUE\C# BACKEND\Lab1\obj\Debug\net7.0\Lab1.AssemblyInfo.cs
+E:\IT_THIBLUE\C# BACKEND\Lab1\obj\Debug\net7.0\Lab1.csproj.CoreCompileInputs.cache
+E:\IT_THIBLUE\C# BACKEND\Lab1\bin\Debug\net7.0\Lab1.exe
+E:\IT_THIBLUE\C# BACKEND\Lab1\bin\Debug\net7.0\Lab1.deps.json
+E:\IT_THIBLUE\C# BACKEND\Lab1\bin\Debug\net7.0\Lab1.runtimeconfig.json
+E:\IT_THIBLUE\C# BACKEND\Lab1\bin\Debug\net7.0\Lab1.dll
+E:\IT_THIBLUE\C# BACKEND\Lab1\bin\Debug\net7.0\Lab1.pdb
+E:\IT_THIBLUE\C# BACKEND\Lab1\obj\Debug\net7.0\Lab1.dll
+E:\IT_THIBLUE\C# BACKEND\Lab1\obj\Debug\net7.0\refint\Lab1.dll
+E:\IT_THIBLUE\C# BACKEND\Lab1\obj\Debug\net7.0\Lab1.pdb
+E:\IT_THIBLUE\C# BACKEND\Lab1\obj\Debug\net7.0\Lab1.genruntimeconfig.cache
+E:\IT_THIBLUE\C# BACKEND\Lab1\obj\Debug\net7.0\ref\Lab1.dll
