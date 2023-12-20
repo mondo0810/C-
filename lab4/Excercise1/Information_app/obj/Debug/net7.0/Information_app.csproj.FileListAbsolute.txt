@@ -1,0 +1,14 @@
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\bin\Debug\net7.0\Information_app.exe
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\bin\Debug\net7.0\Information_app.deps.json
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\bin\Debug\net7.0\Information_app.runtimeconfig.json
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\bin\Debug\net7.0\Information_app.dll
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\bin\Debug\net7.0\Information_app.pdb
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\obj\Debug\net7.0\Information_app.GeneratedMSBuildEditorConfig.editorconfig
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\obj\Debug\net7.0\Information_app.AssemblyInfoInputs.cache
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\obj\Debug\net7.0\Information_app.AssemblyInfo.cs
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\obj\Debug\net7.0\Information_app.csproj.CoreCompileInputs.cache
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\obj\Debug\net7.0\Information_app.dll
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\obj\Debug\net7.0\refint\Information_app.dll
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\obj\Debug\net7.0\Information_app.pdb
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\obj\Debug\net7.0\Information_app.genruntimeconfig.cache
+E:\IT_THIBLUE\C# BACKEND\lab4\Excercise1\Information_app\obj\Debug\net7.0\ref\Information_app.dll

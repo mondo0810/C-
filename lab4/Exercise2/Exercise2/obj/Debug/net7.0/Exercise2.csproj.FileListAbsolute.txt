@@ -1,0 +1,14 @@
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\bin\Debug\net7.0\Exercise2.exe
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\bin\Debug\net7.0\Exercise2.deps.json
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\bin\Debug\net7.0\Exercise2.runtimeconfig.json
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\bin\Debug\net7.0\Exercise2.dll
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\bin\Debug\net7.0\Exercise2.pdb
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\obj\Debug\net7.0\Exercise2.GeneratedMSBuildEditorConfig.editorconfig
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\obj\Debug\net7.0\Exercise2.AssemblyInfoInputs.cache
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\obj\Debug\net7.0\Exercise2.AssemblyInfo.cs
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\obj\Debug\net7.0\Exercise2.csproj.CoreCompileInputs.cache
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\obj\Debug\net7.0\Exercise2.dll
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\obj\Debug\net7.0\refint\Exercise2.dll
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\obj\Debug\net7.0\Exercise2.pdb
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\obj\Debug\net7.0\Exercise2.genruntimeconfig.cache
+E:\IT_THIBLUE\C# BACKEND\lab4\Exercise2\Exercise2\obj\Debug\net7.0\ref\Exercise2.dll
