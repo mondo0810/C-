@@ -1,0 +1,14 @@
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\bin\Debug\net7.0\CrudExample.exe
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\bin\Debug\net7.0\CrudExample.deps.json
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\bin\Debug\net7.0\CrudExample.runtimeconfig.json
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\bin\Debug\net7.0\CrudExample.dll
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\bin\Debug\net7.0\CrudExample.pdb
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\obj\Debug\net7.0\CrudExample.GeneratedMSBuildEditorConfig.editorconfig
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\obj\Debug\net7.0\CrudExample.AssemblyInfoInputs.cache
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\obj\Debug\net7.0\CrudExample.AssemblyInfo.cs
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\obj\Debug\net7.0\CrudExample.csproj.CoreCompileInputs.cache
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\obj\Debug\net7.0\CrudExample.dll
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\obj\Debug\net7.0\refint\CrudExample.dll
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\obj\Debug\net7.0\CrudExample.pdb
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\obj\Debug\net7.0\CrudExample.genruntimeconfig.cache
+E:\IT_THIBLUE\C# BACKEND\CrudExample\CrudExample\obj\Debug\net7.0\ref\CrudExample.dll
