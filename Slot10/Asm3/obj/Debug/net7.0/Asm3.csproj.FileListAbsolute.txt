@@ -1,0 +1,14 @@
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\bin\Debug\net7.0\Asm3.exe
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\bin\Debug\net7.0\Asm3.deps.json
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\bin\Debug\net7.0\Asm3.runtimeconfig.json
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\bin\Debug\net7.0\Asm3.dll
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\bin\Debug\net7.0\Asm3.pdb
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\obj\Debug\net7.0\Asm3.GeneratedMSBuildEditorConfig.editorconfig
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\obj\Debug\net7.0\Asm3.AssemblyInfoInputs.cache
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\obj\Debug\net7.0\Asm3.AssemblyInfo.cs
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\obj\Debug\net7.0\Asm3.csproj.CoreCompileInputs.cache
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\obj\Debug\net7.0\Asm3.dll
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\obj\Debug\net7.0\refint\Asm3.dll
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\obj\Debug\net7.0\Asm3.pdb
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\obj\Debug\net7.0\Asm3.genruntimeconfig.cache
+E:\IT_THIBLUE\C# BACKEND\Slot10\Asm3\obj\Debug\net7.0\ref\Asm3.dll

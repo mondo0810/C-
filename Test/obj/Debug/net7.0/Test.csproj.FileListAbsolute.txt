@@ -1,0 +1,14 @@
+E:\IT_THIBLUE\C# BACKEND\Test\bin\Debug\net7.0\Test.exe
+E:\IT_THIBLUE\C# BACKEND\Test\bin\Debug\net7.0\Test.deps.json
+E:\IT_THIBLUE\C# BACKEND\Test\bin\Debug\net7.0\Test.runtimeconfig.json
+E:\IT_THIBLUE\C# BACKEND\Test\bin\Debug\net7.0\Test.dll
+E:\IT_THIBLUE\C# BACKEND\Test\bin\Debug\net7.0\Test.pdb
+E:\IT_THIBLUE\C# BACKEND\Test\obj\Debug\net7.0\Test.GeneratedMSBuildEditorConfig.editorconfig
+E:\IT_THIBLUE\C# BACKEND\Test\obj\Debug\net7.0\Test.AssemblyInfoInputs.cache
+E:\IT_THIBLUE\C# BACKEND\Test\obj\Debug\net7.0\Test.AssemblyInfo.cs
+E:\IT_THIBLUE\C# BACKEND\Test\obj\Debug\net7.0\Test.csproj.CoreCompileInputs.cache
+E:\IT_THIBLUE\C# BACKEND\Test\obj\Debug\net7.0\Test.dll
+E:\IT_THIBLUE\C# BACKEND\Test\obj\Debug\net7.0\refint\Test.dll
+E:\IT_THIBLUE\C# BACKEND\Test\obj\Debug\net7.0\Test.pdb
+E:\IT_THIBLUE\C# BACKEND\Test\obj\Debug\net7.0\Test.genruntimeconfig.cache
+E:\IT_THIBLUE\C# BACKEND\Test\obj\Debug\net7.0\ref\Test.dll
