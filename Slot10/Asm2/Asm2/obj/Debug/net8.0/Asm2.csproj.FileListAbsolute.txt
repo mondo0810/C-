@@ -1,0 +1,15 @@
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\bin\Debug\net8.0\Asm2.exe
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\bin\Debug\net8.0\Asm2.deps.json
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\bin\Debug\net8.0\Asm2.runtimeconfig.json
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\bin\Debug\net8.0\Asm2.dll
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\bin\Debug\net8.0\Asm2.pdb
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\obj\Debug\net8.0\Asm2.GeneratedMSBuildEditorConfig.editorconfig
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\obj\Debug\net8.0\Asm2.AssemblyInfoInputs.cache
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\obj\Debug\net8.0\Asm2.AssemblyInfo.cs
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\obj\Debug\net8.0\Asm2.csproj.CoreCompileInputs.cache
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\obj\Debug\net8.0\Asm2.sourcelink.json
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\obj\Debug\net8.0\Asm2.dll
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\obj\Debug\net8.0\refint\Asm2.dll
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\obj\Debug\net8.0\Asm2.pdb
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\obj\Debug\net8.0\Asm2.genruntimeconfig.cache
+E:\1_IT_THIBLUE\C# Backend\C-Sharp\Slot10\Asm2\Asm2\obj\Debug\net8.0\ref\Asm2.dll
