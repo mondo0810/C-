@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: localhost:3308
--- Thời gian đã tạo: Th2 19, 2024 lúc 05:51 AM
--- Phiên bản máy phục vụ: 10.4.27-MariaDB
--- Phiên bản PHP: 7.4.33
+-- Máy chủ: 127.0.0.1:3308
+-- Thời gian đã tạo: Th2 20, 2024 lúc 07:18 AM
+-- Phiên bản máy phục vụ: 10.4.24-MariaDB
+-- Phiên bản PHP: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,7 +32,7 @@ CREATE TABLE `attendance` (
   `employee_id` int(11) DEFAULT NULL,
   `work_date` date NOT NULL,
   `hours_worked` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `attendance`
@@ -43,8 +43,28 @@ INSERT INTO `attendance` (`id`, `employee_id`, `work_date`, `hours_worked`) VALU
 (2, 1, '2022-01-06', 7),
 (3, 2, '2022-02-18', 8),
 (4, 2, '2022-02-20', 6),
-(5, 3, '2022-03-25', 8),
-(6, 3, '2022-03-26', 7);
+(6, 3, '2022-03-26', 7),
+(7, 1, '2022-01-06', 8),
+(12, 3, '2022-03-30', 7),
+(14, 1, '2022-01-08', 7),
+(15, 2, '2022-02-18', 8),
+(17, 3, '2022-03-25', 8),
+(18, 3, '2022-03-26', 7),
+(19, 1, '2022-01-06', 8),
+(20, 3, '2022-03-30', 7),
+(21, 1, '2022-01-05', 8),
+(22, 1, '2022-01-06', 7),
+(23, 2, '2022-02-18', 8),
+(24, 2, '2022-02-20', 6),
+(25, 3, '2022-03-26', 7),
+(26, 1, '2022-01-06', 8),
+(27, 3, '2022-03-30', 7),
+(28, 1, '2022-01-06', 7),
+(29, 2, '2022-02-18', 8),
+(30, 3, '2022-03-25', 8),
+(31, 3, '2022-03-19', 7),
+(32, 1, '2022-01-06', 8),
+(33, 3, '2022-03-30', 7);
 
 -- --------------------------------------------------------
 
@@ -56,16 +76,16 @@ CREATE TABLE `employees` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `hire_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `employees`
 --
 
 INSERT INTO `employees` (`id`, `name`, `hire_date`) VALUES
-(1, 'Employee 1', '2022-01-01'),
-(2, 'Employee 2', '2022-02-15'),
-(3, 'Employee 3', '2022-03-20');
+(1, 'Nguyen Minh Tian', '2022-01-01'),
+(2, 'Do Thi', '2022-02-15'),
+(3, 'Tran Quan', '2022-03-20');
 
 -- --------------------------------------------------------
 
@@ -77,16 +97,21 @@ CREATE TABLE `leave_requests` (
   `id` int(11) NOT NULL,
   `employee_id` int(11) DEFAULT NULL,
   `leave_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `leave_requests`
 --
 
 INSERT INTO `leave_requests` (`id`, `employee_id`, `leave_date`) VALUES
-(1, 1, '2022-01-10'),
 (2, 2, '2022-02-22'),
-(3, 3, '2022-03-30');
+(3, 3, '2022-03-30'),
+(5, 2, '2022-02-19'),
+(6, 3, '2022-03-26'),
+(7, 2, '2022-02-22'),
+(8, 3, '2022-03-18'),
+(9, 2, '2022-02-19'),
+(10, 3, '2022-03-26');
 
 -- --------------------------------------------------------
 
@@ -96,7 +121,7 @@ INSERT INTO `leave_requests` (`id`, `employee_id`, `leave_date`) VALUES
 
 CREATE TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -149,7 +174,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT cho bảng `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT cho bảng `employees`
@@ -161,7 +186,7 @@ ALTER TABLE `employees`
 -- AUTO_INCREMENT cho bảng `leave_requests`
 --
 ALTER TABLE `leave_requests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `migrations`

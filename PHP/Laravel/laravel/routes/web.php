@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EmployeeController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +13,6 @@ use App\Http\Controllers\EmployeeController;
 |
 */
 
-Route::get('/', [EmployeeController::class, 'performanceSummary']);
-
-
-Route::get('/performance', [EmployeeController::class, 'performanceSummary']);
+Route::get('/', function () {
+    return view('welcome');
+});

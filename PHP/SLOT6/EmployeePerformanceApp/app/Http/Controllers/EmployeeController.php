@@ -12,22 +12,24 @@ class EmployeeController extends Controller
 
     public function performanceSummary()
     {
-        // Lấy thông tin hiệu suất của nhân viên trong 12 tháng
-        $employeesPerformance = DB::table('employees')
-            ->leftJoin('attendances', 'employees.id', '=', 'attendances.employee_id')
-            ->leftJoin('leave_requests', 'employees.id', '=', 'leave_requests.employee_id')
-            ->select(
-                'employees.id',
-                'employees.name',
-                DB::raw('SUM(attendances.hours_worked) AS total_hours_worked'),
-                DB::raw('SUM(leave_requests.leave_date IS NOT NULL) AS total_leave_days')
-            )
-            ->groupBy('employees.id', 'employees.name')
-            ->get();
+        $employeesPerformance = DB::select('
+            SELECT
+                e.id,
+                e.name,
+                SUM(a.hours_worked) AS total_hours_worked,
+                COUNT(DISTINCT a.work_date) AS total_work_days,
+                COUNT(DISTINCT l.leave_date) AS total_leave_days,
+                GROUP_CONCAT(DISTINCT l.leave_date) AS leave_dates
+            FROM employees e
+            LEFT JOIN attendance a ON e.id = a.employee_id
+            LEFT JOIN leave_requests l ON e.id = l.employee_id
+            GROUP BY e.id, e.name
+        ');
 
-        // Hiển thị view với dữ liệu hiệu suất
         return view('performance.summary', compact('employeesPerformance'));
     }
+
+
     /**
      * Display a listing of the resource.
      *
