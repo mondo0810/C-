@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreEmployeeRequest;
 use App\Http\Requests\UpdateEmployeeRequest;
 
+
 class EmployeeController extends Controller
 {
 
@@ -16,6 +17,7 @@ class EmployeeController extends Controller
             SELECT
                 e.id,
                 e.name,
+                e.hire_date,
                 SUM(a.hours_worked) AS total_hours_worked,
                 COUNT(DISTINCT a.work_date) AS total_work_days,
                 COUNT(DISTINCT l.leave_date) AS total_leave_days,
@@ -23,11 +25,13 @@ class EmployeeController extends Controller
             FROM employees e
             LEFT JOIN attendance a ON e.id = a.employee_id
             LEFT JOIN leave_requests l ON e.id = l.employee_id
-            GROUP BY e.id, e.name
+            GROUP BY e.id, e.name,e.hire_date
         ');
 
         return view('performance.summary', compact('employeesPerformance'));
     }
+
+
 
 
     /**

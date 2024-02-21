@@ -14,6 +14,9 @@
 
 <body>
     <div class="container">
+        <a href="/"><img class="mt-5" style="height: 50px"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2491px-Logo_of_Twitter.svg.png"
+                alt=""></a>
         @yield('content')
     </div>
 
