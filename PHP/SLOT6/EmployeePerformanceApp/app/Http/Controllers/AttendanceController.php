@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateAttendanceRequest;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use App\Models\Employee;
 
 
 class AttendanceController extends Controller
@@ -17,8 +18,7 @@ class AttendanceController extends Controller
     {
         $employeeId = $request->input('employee_id');
 
-        $existingAttendance = DB::table('attendance')
-            ->where('employee_id', $employeeId)
+        $existingAttendance = Attendance::where('employee_id', $employeeId)
             ->whereDate('work_date', now()->toDateString())
             ->first();
 
@@ -27,20 +27,18 @@ class AttendanceController extends Controller
         }
 
         // Tạo mới bản ghi điểm danh
-        DB::table('attendance')->insert([
+        Attendance::create([
             'employee_id' => $employeeId,
             'work_date' => now(),
             'hours_worked' => 8,
-
         ]);
 
         return redirect()->route('checkin.show')->with('success', 'Check-in successful.');
     }
 
-
     public function showCheckinForm()
     {
-        $employees = DB::table('employees')->get();
+        $employees = Employee::all(); // Giả sử bạn đã có model Employee
         return view('checkin', compact('employees'));
     }
 
