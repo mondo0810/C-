@@ -29,7 +29,7 @@ class ArticleController extends BaseController
     {
         $articles = Article::all();
 
-        return $this->sendResponse(ArticleResource::collection($articles), 'Article retrieved successfully.');
+        return $this->sendResponse($articles, 'Article retrieved successfully.');
     }
 
     /**
