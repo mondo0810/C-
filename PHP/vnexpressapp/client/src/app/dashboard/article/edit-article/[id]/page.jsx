@@ -3,23 +3,29 @@ import React, { useState, useEffect } from "react";
 import axios from "@/utils/axios";
 import { toast } from "react-toastify";
 
-const AddArticleForm = () => {
+const EditArticleForm = ({ params }) => {
   const [formData, setFormData] = useState({
     title: "",
     author: "",
     detail: "",
-    category_id: "",
+    category_id: "1", // Assuming category_id is a required field with default value 1
   });
-  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
+    // Fetch article data to populate the form
     axios
-      .get("/categories")
+      .get("/articles/" + params.id)
       .then((response) => {
-        setCategories(response.data.categories);
+        const { title, author, detail, category_id } = response.data.data;
+        setFormData({
+          title: title,
+          author: author,
+          detail: detail,
+          category_id: category_id,
+        });
       })
       .catch((error) => {
-        console.error("Failed to fetch categories:", error);
+        console.error("Failed to fetch article data:", error);
       });
   }, []);
 
@@ -34,22 +40,22 @@ const AddArticleForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("/articles", formData, {
+      const response = await axios.put("/articles/" + params.id, formData, {
         headers: {
           "Content-Type": "application/json",
         },
       });
-      toast.success("Article added successfully.");
+      toast.success("Article updated successfully");
+      console.log("Article updated successfully:", response.data);
     } catch (error) {
-      console.log(error);
-      toast.error("You are not authorized to publish articles in this category.");
+      console.error("Error updating article:", error);
+      toast.error("User does not have the right permissions");
     }
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-md">
-      <h2 className="text-2xl font-bold mb-4">Add Article</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 bg-white shadow-md rounded-md">
+      <div className="space-y-4">
         <div>
           <label htmlFor="title" className="block mb-1">
             Title:
@@ -92,34 +98,28 @@ const AddArticleForm = () => {
           ></textarea>
         </div>
         <div>
-          <label htmlFor="category" className="block mb-1">
-            Category:
+          <label htmlFor="category_id" className="block mb-1">
+            Category ID:
           </label>
-          <select
-            id="category"
+          <input
+            id="category_id"
+            type="text"
             name="category_id"
             value={formData.category_id}
             onChange={handleChange}
             required
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-          >
-            <option value="">Select a category</option>
-            {categories.map((category) => (
-              <option key={category.id} value={category.id}>
-                {category.name}
-              </option>
-            ))}
-          </select>
+          />
         </div>
         <button
           type="submit"
           className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
         >
-          Submit
+          Update Article
         </button>
-      </form>
-    </div>
+      </div>
+    </form>
   );
 };
 
-export default AddArticleForm;
+export default EditArticleForm;

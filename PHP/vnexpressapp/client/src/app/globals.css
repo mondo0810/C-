@@ -2,129 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Pacifico&display=swap');
-
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
-}
-
-
-body {
-    background-color: #f8f8f8;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-.swal-footer {
-    text-align: center;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
-
-.cart-item {
-    animation: slideIn 0.5s;
-}
-
+/* Style all input and textarea elements */
 input,
 textarea {
-    border: 1px solid #000;
+    padding: 10px;
+    /* Add padding */
+    border: 1px solid #ccc;
+    /* Add border */
     border-radius: 5px;
+    /* Add border radius */
+    font-size: 16px;
+    /* Set font size */
+    outline: none;
+    /* Remove outline */
 }
 
-.NavButton:hover {
-    color: rgb(224, 166, 6);
-    border-radius: 5px;
-}
-
-.bg-product {
-    background-color: rgb(255, 220, 123);
-}
-
-.btn-login {
-    border: 2px solid #e19c00;
-    font-weight: 600;
-    background-color: #faffdd;
-    padding: 6px 36px;
-    border-radius: 5px;
-    color: rgb(255 129 0);
-}
-
-.btn-login:hover {
-    border: 2px solid #ff8c00;
-    font-weight: 660;
-    background-color: #ffbf00;
-
-}
-
-.pagination-item {
-    padding: 5px 14px;
-    border: 1px solid #0bdb9d;
-    border-radius: 5px;
-    font-weight: 500;
-    margin: 2px;
-}
-
-.pagination {
-
-
-    margin: 20px auto;
-}
-
-.page-active {
-    background-color: #0bdb9d;
-    border: 1px solid #02aa78;
+/* Style for focused input and textarea elements */
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    /* Change border color when focused */
 }
 
 
+/* Style only text input elements */
+input[type="text"] {
+    /* Additional styles specific to text inputs */
+}
 
+/* Style input elements within a form with class "my-form" */
+.my-form input {
+    /* Additional styles specific to input elements within "my-form" */
+}
 
-
-.product-image {
-    aspect-ratio: 16/9;
-    object-fit: cover;
+/* Hide the default checkbox */
+input[type="checkbox"] {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 
-
-.btn-white-solid {
-    border-radius: 32px;
-    border-width: 1px;
-    background-color: white;
-    padding: 1.25rem 2.5rem
+/* Style the checked state */
+input[type="checkbox"].checked {
+    background-color: #007bff;
 }
 
-footer {
-    background-color: rgb(89 89 89);
+/* Style the checkmark */
+input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
-.expanded {
-    display: none;
+/* Show the checkmark when checkbox is checked */
+input[type="checkbox"]:checked+.custom-checkbox::after {
+    opacity: 1;
 }
 
-.img_shadow {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    box-shadow: 4px 4px 8px 0px #888;
+/* Style the select dropdown */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 8px 30px 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Style the dropdown arrow */
+select::after {
+    content: '\25BC';
+    /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Style the options */
+select option {
+    padding: 8px;
+}
+
+/* Style the selected option */
+select option:checked {
+    background-color: #007bff;
+    color: #fff;
 }

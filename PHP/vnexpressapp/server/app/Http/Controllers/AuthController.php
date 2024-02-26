@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Support\Facades\Cookie;
+use Spatie\Permission\Models\Role;
 
 
 class AuthController extends Controller
@@ -22,6 +23,29 @@ class AuthController extends Controller
         $this->middleware('auth:api', ['except' => ['login', 'register']]);
     }
 
+    public function editRole(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'user_id' => 'required|exists:users,id'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors()->toJson(), 400);
+        }
+
+        $user = User::find($request->user_id);
+        $roles = Role::whereIn('name', $request->role_name)->get();
+
+        if (!$user) {
+            return response()->json(['message' => 'User  not found'], 200);
+        }
+        $user->syncRoles($roles);
+
+        return response()->json([
+            'message' => 'Role updated successfully',
+            'user' => $user
+        ], 200);
+    }
     /**
      * Get a JWT via given credentials.
      *
@@ -49,7 +73,24 @@ class AuthController extends Controller
 
     public function index()
     {
-        return User::all();
+        $users = User::with('categories')->get();
+
+        $usersWithRolesAndPermissions = $users->map(function ($user) {
+            $roles = $user->getRoleNames();
+            $permissions = $user->getAllPermissions()->pluck('name');
+
+            return [
+                'user' => [
+                    'user' => $user,
+                    'roles' => $roles,
+                    'permissions' => $permissions,
+                    'category' => $user->categories,
+
+                ]
+            ];
+        });
+
+        return response()->json($usersWithRolesAndPermissions, 200);
     }
 
     public function register(Request $request)

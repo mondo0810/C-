@@ -16,8 +16,9 @@ class CategoryUserController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('permission:category-create', ['only' => ['create', 'store']]);
-        $this->middleware('permission:category-edit', ['only' => ['edit', 'update', 'destroy']]);
+        $this->middleware('permission:category-list', ['only' => ['index']]);
+        $this->middleware('permission:category-create', ['only' => ['create']]);
+        $this->middleware('permission:category-edit', ['only' => ['edit', 'store', 'destroy']]);
     }
 
 
@@ -63,7 +64,7 @@ class CategoryUserController extends Controller
         $user = User::findOrFail($userId);
 
         if ($category->users->contains($user)) {
-            return response()->json(['error' => 'User is already in this category.'], 400);
+            return response()->json(['message' => 'User is already in this category.'], 200);
         }
 
         $category->users()->attach($user);

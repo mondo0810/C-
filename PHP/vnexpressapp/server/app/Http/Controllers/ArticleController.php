@@ -6,6 +6,7 @@ use App\Http\Controllers\BaseController as BaseController;
 use App\Models\Article;
 use App\Http\Requests\ArticleRequests;
 use App\Http\Resources\Article as ArticleResource;
+use Illuminate\Http\Request;
 
 class ArticleController extends BaseController
 {
@@ -16,6 +17,7 @@ class ArticleController extends BaseController
      */
     public function __construct()
     {
+        $this->middleware('permission:article-list', ['only' => ['index']]);
         $this->middleware('permission:article-create', ['only' => ['create', 'store']]);
         $this->middleware('permission:article-edit', ['only' => ['edit', 'update', 'destroy']]);
     }
@@ -109,7 +111,7 @@ class ArticleController extends BaseController
      * @return \Illuminate\Http\Response
      */
 
-    public function update(ArticleRequests $request, Article $article)
+    public function update(Request $request, Article $article)
     {
         $input = $request->all();
 

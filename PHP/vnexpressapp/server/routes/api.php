@@ -34,6 +34,7 @@ Route::group([
     Route::post('login', [AuthController::class, 'login']);
     Route::post('logout', [AuthController::class, 'logout']);
     Route::post('refresh', [AuthController::class, 'refresh']);
+    Route::post('edit-role', [AuthController::class, 'editRole']);
     Route::get('index', [AuthController::class, 'index']);
     Route::get('me', [AuthController::class, 'me']);
 

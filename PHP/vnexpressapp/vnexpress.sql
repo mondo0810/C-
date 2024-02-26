@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3308
--- Thời gian đã tạo: Th2 25, 2024 lúc 06:29 PM
+-- Thời gian đã tạo: Th2 26, 2024 lúc 01:44 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.1.17
 
@@ -38,15 +38,6 @@ CREATE TABLE `articles` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `articles`
---
-
-INSERT INTO `articles` (`id`, `title`, `author`, `detail`, `user_id`, `category_id`, `created_at`, `updated_at`) VALUES
-(1, 'First Article', 'Marrie', 'This is marrie\'s first article', 1, 1, '2024-02-25 09:21:56', '2024-02-25 09:21:56'),
-(2, 'First Article', 'Marrie', 'This is marrie\'s first article', 1, 1, '2024-02-25 09:21:58', '2024-02-25 09:21:58'),
-(3, 'First Article', 'Marrie', 'This is marrie\'s first article', 1, 1, '2024-02-25 09:21:59', '2024-02-25 09:21:59');
-
 -- --------------------------------------------------------
 
 --
@@ -59,13 +50,6 @@ CREATE TABLE `categories` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `categories`
---
-
-INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'dsffdsdfs', '2024-02-25 08:35:01', '2024-02-25 08:35:01');
 
 -- --------------------------------------------------------
 
@@ -80,13 +64,6 @@ CREATE TABLE `category_users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `category_users`
---
-
-INSERT INTO `category_users` (`id`, `user_id`, `category_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -121,15 +98,15 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(19, '2014_10_12_000000_create_users_table', 1),
-(20, '2014_10_12_100000_create_password_resets_table', 1),
-(21, '2019_08_19_000000_create_failed_jobs_table', 1),
-(22, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(23, '2021_05_25_000003_create_categories_table', 1),
-(24, '2021_05_25_000009_create_articles_table', 1),
-(25, '2021_05_25_094800_create_permission_tables', 1),
-(26, '2021_05_25_101115_drop_status_column', 1),
-(27, '2024_02_25_142823_create_category_users_table', 1);
+(55, '2014_10_12_000000_create_users_table', 1),
+(56, '2014_10_12_100000_create_password_resets_table', 1),
+(57, '2019_08_19_000000_create_failed_jobs_table', 1),
+(58, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(59, '2021_05_25_000003_create_categories_table', 1),
+(60, '2021_05_25_000009_create_articles_table', 1),
+(61, '2021_05_25_094800_create_permission_tables', 1),
+(62, '2021_05_25_101115_drop_status_column', 1),
+(63, '2024_02_25_142823_create_category_users_table', 1);
 
 -- --------------------------------------------------------
 
@@ -154,14 +131,6 @@ CREATE TABLE `model_has_roles` (
   `model_type` varchar(255) NOT NULL,
   `model_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `model_has_roles`
---
-
-INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
-(1, 'App\\Models\\User', 1),
-(2, 'App\\Models\\User', 2);
 
 -- --------------------------------------------------------
 
@@ -188,21 +157,6 @@ CREATE TABLE `permissions` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `permissions`
---
-
-INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'user-list', 'api', '2024-02-25 08:32:48', '2024-02-25 08:32:48'),
-(2, 'user-create', 'api', '2024-02-25 08:32:48', '2024-02-25 08:32:48'),
-(3, 'user-edit', 'api', '2024-02-25 08:32:48', '2024-02-25 08:32:48'),
-(4, 'article-list', 'api', '2024-02-25 08:32:48', '2024-02-25 08:32:48'),
-(5, 'article-create', 'api', '2024-02-25 08:32:48', '2024-02-25 08:32:48'),
-(6, 'article-edit', 'api', '2024-02-25 08:32:48', '2024-02-25 08:32:48'),
-(7, 'category-list', 'api', '2024-02-25 08:32:48', '2024-02-25 08:32:48'),
-(8, 'category-create', 'api', '2024-02-25 08:32:48', '2024-02-25 08:32:48'),
-(9, 'category-edit', 'api', '2024-02-25 08:32:48', '2024-02-25 08:32:48');
 
 -- --------------------------------------------------------
 
@@ -236,14 +190,6 @@ CREATE TABLE `roles` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `roles`
---
-
-INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'super-admin', 'api', '2024-02-25 08:32:48', '2024-02-25 08:32:48'),
-(2, 'admin', 'api', '2024-02-25 08:32:48', '2024-02-25 08:32:48');
-
 -- --------------------------------------------------------
 
 --
@@ -254,29 +200,6 @@ CREATE TABLE `role_has_permissions` (
   `permission_id` bigint(20) UNSIGNED NOT NULL,
   `role_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `role_has_permissions`
---
-
-INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
-(1, 1),
-(1, 2),
-(2, 1),
-(3, 1),
-(3, 2),
-(4, 1),
-(4, 2),
-(5, 1),
-(5, 2),
-(6, 1),
-(6, 2),
-(7, 1),
-(7, 2),
-(8, 1),
-(8, 2),
-(9, 1),
-(9, 2);
 
 -- --------------------------------------------------------
 
@@ -294,14 +217,6 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin1', 'admin1@gmail.com', NULL, '$2y$10$/XF23bcDOZSv4pXrzppIaetCbjoIKnUngBi1CXTkyw394T9MOo0C2', NULL, '2024-02-25 08:32:48', '2024-02-25 08:32:48'),
-(2, 'admin2', 'admin2@gmail.com', NULL, '$2y$10$sWqjTlIKbvlrvkiG6oqFH.tjunHImjsA.vw2qvK3MBGDjzoScp3Ey', NULL, '2024-02-25 08:32:48', '2024-02-25 08:32:48');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -406,19 +321,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `category_users`
 --
 ALTER TABLE `category_users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `failed_jobs`
@@ -430,13 +345,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT cho bảng `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `personal_access_tokens`
@@ -448,13 +363,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT cho bảng `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

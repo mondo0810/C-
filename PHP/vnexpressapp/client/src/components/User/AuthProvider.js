@@ -1,18 +1,20 @@
 "use client"
 const axios = require('axios');
 import React, { createContext, useState, useEffect } from "react";
+import { useRouter } from 'next/navigation'
 import Cookies from 'js-cookie';
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
+    const router = useRouter()
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState("");
     const [userId, setUserId] = useState("");
     const [user, setUser] = useState("");
     const [email, setEmail] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
-
     useEffect(() => {
         setErrorMessage("")
         const token = Cookies.get("access_token");
@@ -36,34 +38,37 @@ const AuthProvider = ({ children }) => {
             const token = response.data.access_token;
             console.log(token);
             Cookies.set("access_token", token, {
-                expires: 1, // Cookie expires in 1 day
-                secure: true, // Send cookie only over HTTPS
-                sameSite: "strict", // Restrict cookie to the same site
+                expires: 1,
+                secure: true,
+                sameSite: "strict",
             });
-            // Fetch user data from the server using the token
             fetchUserData(token);
-            setErrorMessage("Đăng nhập thành công");
-
+            toast.success("Đăng nhập thành công");
+            router.push('/dashboard/users')
         } catch (error) {
             console.error("Đã xảy ra lỗi:", error);
             setErrorMessage("Đã xảy ra lỗi trong quá trình đăng nhập.");
+            toast.error(error.message);
             return false;
         }
     };
 
-    const handleRegister = async (username, email, password) => {
+    const handleRegister = async (name, email, password, password_confirmation) => {
         try {
             const response = await fetch(process.env.DOMAIN + "/auth/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ username, email, password }),
+                body: JSON.stringify({ name, email, password, password_confirmation }),
             });
 
             if (response.ok) {
+                toast.success("Đăng ký thành công, đang đăng nhập");
                 setErrorMessage("Đăng ký thành công, đang đăng nhập")
-                const success = await handleLogin(username, password);
+
+                const success = await handleLogin(name, password);
+                router.push('/dashboard/users')
                 return success;
             } else {
                 const data = await response.json();
@@ -78,8 +83,7 @@ const AuthProvider = ({ children }) => {
     };
 
     const handleLogout = () => {
-        // Clear the token and user data when logging out
-        Cookies.remove("token");
+        Cookies.remove("access_token");
         setIsLoggedIn(false);
         setUsername("");
     };

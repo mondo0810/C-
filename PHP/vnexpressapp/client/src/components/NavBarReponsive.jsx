@@ -22,11 +22,11 @@ export default function NavBarReponsive() {
   return (
     <>
       <nav
-        className={`mx-auto  fixed top-0 shadow-md lg:bg-opacity-80 bg-gray-50 z-20 px-5 font-semibold text-gray-600 transition-all w-full duration-500 backdrop-blur-md  ${
+        className={`max-w-6xl mx-auto fixed top-0 shadow-md lg:bg-opacity-80 bg-gray-50 z-20 px-5 font-semibold text-gray-600 transition-all w-full duration-500 backdrop-blur-md  ${
           openNav ? " top-0 bg-white" : ""
         }`}
       >
-        <div className=" max-w-6xl relative mx-auto flex flex-col  justify-between py-2 lg:flex-row lg:items-center lg:space-x-10">
+        <div className=" relative flex justify-between py-2 lg:flex-row lg:items-center lg:space-x-10">
           {/* Start Navbar Mobile */}
           <div className="flex items-center justify-between">
             <Link href="/">
@@ -182,7 +182,7 @@ export default function NavBarReponsive() {
                     >
                       <Link href="/user/profile">
                         <div className="px-4 py-3 text-sm text-gray-900 dark:text-white hover:bg-gray-100">
-                          <div>{username}</div>
+                          <div>Hello: {username}</div>
                         </div>
                       </Link>
 
@@ -192,15 +192,15 @@ export default function NavBarReponsive() {
                       >
                         <li>
                           <Link
-                            href="/dashboard"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            href="/dashboard/users"
+                            className="block px-4 py-2 text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                           >
                             DashBoard
                           </Link>
                         </li>
                         <li>
                           <Link
-                            href="/article"
+                            href="/dashboard/users"
                             className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                           >
                             Article
